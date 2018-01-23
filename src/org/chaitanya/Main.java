@@ -1,5 +1,7 @@
 package org.chaitanya;
 
+import org.chaitanya.composition.*;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -28,6 +30,24 @@ public class Main {
         System.out.println("animal name  "+animal.getName());
 
         dog.chewing();
+
+
+//        folder data ..case
+        Dimensions dimensions=new Dimensions(22,44,11);
+        Case theCase=new Case("220B","dell","240",dimensions);
+
+        Monitor theMonitor=new Monitor("27inch beast","acer",27,new Resolution(2540,1440));
+
+        Motherboard theMotherboard=new Motherboard("BJ-200","Asus",4,4,"v2.44");
+
+        PC thePc=new PC(theCase,theMonitor,theMotherboard);
+
+        thePc.getMonitor().drawPixelAt(1500,1200,"red");
+        thePc.getMotherboard().loadProgram("windows10");
+        thePc.getTheCase().pressPowerButton();
+
+
+
 
     }
 }
