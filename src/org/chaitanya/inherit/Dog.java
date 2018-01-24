@@ -1,6 +1,8 @@
-package org.chaitanya;
+package org.chaitanya.inherit;
 
-public class Dog extends Animal{
+import org.chaitanya.inherit.Animal;
+
+public class Dog extends Animal {
 
     private int eyes;
     private int legs;

@@ -1,4 +1,4 @@
-package org.chaitanya;
+package org.chaitanya.inherit;
 
 public class Animal {
     private String name;

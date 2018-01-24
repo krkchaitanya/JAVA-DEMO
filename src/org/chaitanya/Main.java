@@ -1,14 +1,22 @@
 package org.chaitanya;
 
+import com.oracle.xmlns.internal.webservices.jaxws_databinding.JavaWsdlMappingType;
+import org.chaitanya.classesContsructors.Account;
+import org.chaitanya.classesContsructors.Car;
 import org.chaitanya.composition.*;
+import org.chaitanya.encapsulation.EnhancedPlayer;
+import org.chaitanya.encapsulation.Player;
+import org.chaitanya.inherit.Animal;
+import org.chaitanya.inherit.Dog;
+import org.chaitanya.polymorph.Movie;
 
 public class Main {
 
     public static void main(String[] args) {
 
 //        Car class
-        Car porsche=new Car();
-        Car holden=new Car();
+        org.chaitanya.classesContsructors.Car porsche=new org.chaitanya.classesContsructors.Car();
+        org.chaitanya.classesContsructors.Car holden=new Car();
         porsche.setModel("someModel");
         System.out.println("model gonna be--"+porsche.getModel());
 
@@ -48,6 +56,48 @@ public class Main {
 
 
 
+//        ENCAPSULATION .................
+
+//        Player player=new Player();
+//        player.name="mike";
+//        player.health=20;
+//        player.weapon="sword";
+//
+//        int damage=10;
+//        player.loseHealth(damage);
+//        System.out.println("........Encapsulation__Remaining health--"+player.healthRemaining());
+//
+
+
+        EnhancedPlayer enhancedPlayer=new EnhancedPlayer("tim",200,"knife");
+        System.out.println("encapsulation.....gettingHealth---"+enhancedPlayer.getHealth());
+
+
+
+
+
+//        ---------------------MOVIES------------------------MOVIES-----------------------
+
+
+
+        public static Movie randomMovie{
+
+            int randomNumber=(int) (Math.random()*5)+1;
+            System.out.println("random no generated is ---"+randomNumber);
+
+            switch (randomNumber){
+                case 1:{
+                    return new Jaws();
+                }
+            }
+
+
+        }
+
+
+
 
     }
 }
+
+
