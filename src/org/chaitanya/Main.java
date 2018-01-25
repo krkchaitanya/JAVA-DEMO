@@ -1,6 +1,6 @@
 package org.chaitanya;
 
-import com.oracle.xmlns.internal.webservices.jaxws_databinding.JavaWsdlMappingType;
+
 import org.chaitanya.classesContsructors.Account;
 import org.chaitanya.classesContsructors.Car;
 import org.chaitanya.composition.*;
@@ -10,9 +10,17 @@ import org.chaitanya.inherit.Animal;
 import org.chaitanya.inherit.Dog;
 import org.chaitanya.polymorph.Movie;
 
+import java.util.Scanner;
+
+
 public class Main {
 
+    private static Scanner scanner=new Scanner(System.in);
     public static void main(String[] args) {
+
+
+
+
 
 //        Car class
         org.chaitanya.classesContsructors.Car porsche=new org.chaitanya.classesContsructors.Car();
@@ -77,27 +85,101 @@ public class Main {
 
 
 //        ---------------------MOVIES------------------------MOVIES-----------------------
+//
+//
+//
+//        public static Movie randomMovie{
+//
+//            int randomNumber=(int) (Math.random()*5)+1;
+//            System.out.println("random no generated is ---"+randomNumber);
+//
+//            switch (randomNumber){
+//                case 1:{
+//                    return new Jaws();
+//                }
+//            }
+//
+//
+//        }
 
 
+//        .........................ARRAYS --------------------------
 
-        public static Movie randomMovie{
+        int[] myIntarray=new int[10];
+        myIntarray[5]=50;
 
-            int randomNumber=(int) (Math.random()*5)+1;
-            System.out.println("random no generated is ---"+randomNumber);
+        double[] myDoublearray=new double[5];
+        myDoublearray[4]=40;
 
-            switch (randomNumber){
-                case 1:{
-                    return new Jaws();
-                }
-            }
+        System.out.println("intarray-- "+myIntarray[5] +" mydoublearray-- "+myDoublearray[4]);
 
 
+        int[] myArrayInt={1,2,3,4,5,6,7};
+        System.out.println("myArrayInt-- "+myArrayInt[4]);
+
+        int[] myDynArr=new int[10];
+
+        for (int i=0;i<myDynArr.length;i++){
+            myDynArr[i]=i*10;
         }
+
+        printArray(myDynArr);
+
+
+
+
+//-----------JAVA  _______  Array ---------------
+
+
+            int[] myIntegers = getIntegers(5);
+            for (int i = 0; i < myIntegers.length; i++) {
+                System.out.println("Element " + i + "types was" + myIntegers[i]);
+            }
+        System.out.println("average of array gonna be_______ "+getAvg(myIntegers));
+
+
+
 
 
 
 
     }
+
+//    get integers method
+
+    public static int[] getIntegers(int number){
+        System.out.println("enter "+ number+" integer values \r");
+        int[] values=new int[number];
+        for (int i=0;i<values.length;i++){
+            values[i]=scanner.nextInt();
+        }
+        return values;
+    }
+
+
+
+//    print array method
+
+    public static void printArray(int[] Array){
+        for (int i=0;i<Array.length;i++){
+            System.out.println("hey printarray method------ "+Array[i]);
+        }
+    }
+
+
+
+//    get average method
+
+    public static double getAvg(int[] array){
+        int sum=0;
+        for (int i=0;i<array.length;i++){
+            sum+=array[i];
+        }
+        return (double) sum/ (double)array.length;
+    }
+
+
+
 }
 
 
