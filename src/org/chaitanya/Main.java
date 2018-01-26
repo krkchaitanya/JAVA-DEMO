@@ -1,6 +1,7 @@
 package org.chaitanya;
 
 
+import org.chaitanya.ListArray.GroceryList;
 import org.chaitanya.classesContsructors.Account;
 import org.chaitanya.classesContsructors.Car;
 import org.chaitanya.composition.*;
@@ -15,6 +16,8 @@ import java.util.Scanner;
 
 public class Main {
 
+
+    private static GroceryList groceryList=new GroceryList();
     private static Scanner scanner=new Scanner(System.in);
     public static void main(String[] args) {
 
@@ -131,6 +134,8 @@ public class Main {
 //-----------JAVA  _______  Array ---------------
 
 
+
+
             int[] myIntegers = getIntegers(5);
             for (int i = 0; i < myIntegers.length; i++) {
                 System.out.println("Element " + i + "types was" + myIntegers[i]);
@@ -139,11 +144,133 @@ public class Main {
 
 
 
+//list array package/////////////////////////////////////////////
+
+
+        GroceryList groceryList=new GroceryList();
+
+        boolean quit=false;
+        int choice=0;
+        printInstructions();
+        while (!quit){
+            System.out.println("---enter ur choice----");
+            choice=scanner.nextInt();
+            scanner.nextLine();
+            switch(choice){
+                case 0:{
+                    printInstructions();
+                    break;
+                }
+                case 1:{
+                    groceryList.printItems();
+                    break;
+                }
+                case 2:{
+                    addItem();
+                    break;
+                }
+                case 3:{
+                    modifyItem();
+                    break;
+                }
+                case 4:{
+                    removeItem();
+                    break;
+                }
+                case 5:{
+                    searchFotItem();
+                    break;
+                }
+                case 6:
+                    quit=true;
+                    break;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
     }
+
+
+// print instructions--listArray package-----------------------
+
+    public static void printInstructions(){
+        System.out.println("0--choose some no");
+        System.out.println("1--list of items");
+        System.out.println("2--add item");
+        System.out.println("3--modify itemmmm");
+        System.out.println("4--remove item");
+        System.out.println("5--serch for item in list");
+        System.out.println("6--quit pplication");
+    }
+
+
+    public static void addItem(){
+        System.out.println("please enter the grocery item----");
+        groceryList.addItem(scanner.nextLine());
+    }
+
+    public static void modifyItem(){
+        System.out.println("please enter the position and the newItem");
+        int posi=scanner.nextInt();
+        System.out.println("enter replacement item..");
+        String newItem=scanner.nextLine();
+        groceryList.modifyItem(posi,newItem);
+    }
+
+    public static void removeItem(){
+        System.out.println("enter item no");
+        int no=scanner.nextInt();
+        groceryList.removeItem(no);
+    }
+
+    public static void searchFotItem(){
+        System.out.println("search for the item...");
+        String ite=scanner.nextLine();
+        if(groceryList.findItem(ite)!=null){
+            System.out.println("found-"+ite+" item");
+        }else{
+            System.out.println(ite+"item not found--");
+        }
+    }
+
+
+
+
+
+
+
+
+
 
 //    get integers method
 
