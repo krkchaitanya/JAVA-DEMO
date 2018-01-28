@@ -2,6 +2,7 @@ package org.chaitanya;
 
 
 import org.chaitanya.AutoBoxingAndUnboxing.IntClass;
+import org.chaitanya.LinkedList.Customer;
 import org.chaitanya.ListArray.GroceryList;
 import org.chaitanya.classesContsructors.Account;
 import org.chaitanya.classesContsructors.Car;
@@ -222,7 +223,7 @@ public class Main {
         }
 
         for (int i=0;i<intArrLi.size();i++){
-            System.out.println("auto boxing and unboxing......"+intArrLi.get(i).intValue());
+            //System.out.println("auto boxing and unboxing......"+intArrLi.get(i).intValue());
         }
 
 
@@ -233,16 +234,37 @@ public class Main {
         }
 
         for (int i=0;i<doubleArrLi.size();i++){
-            System.out.println("double array list------data---"+doubleArrLi.get(i).doubleValue());
+            //System.out.println("double array list------data---"+doubleArrLi.get(i).doubleValue());
         }
 
 
 
 
-//------------------------------
+//------------------------------LINKEDlIST---------------------
+
+        Customer customer=new Customer("Tim", 142.0);
+        Customer anotherCustomer;
+        anotherCustomer=customer;
+        anotherCustomer.setBalance(12.99);
+
+        System.out.println("customer name is  "+customer.getName() +"  and his bal is  "+customer.getBalance());
 
 
+        ArrayList<Integer> linkArrLi=new ArrayList<Integer>();
 
+        linkArrLi.add(10);
+        linkArrLi.add(11);
+        linkArrLi.add(12);
+        linkArrLi.add(13);
+
+        for (int i=0;i<linkArrLi.size();i++){
+            System.out.println("link array list -->> "+linkArrLi.get(i).intValue());
+        }
+
+        linkArrLi.add(2,33);
+        for (int i=0;i<linkArrLi.size();i++){
+            System.out.println("updated link array list -->> "+linkArrLi.get(i).intValue());
+        }
 
 
 
