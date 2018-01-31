@@ -28,7 +28,28 @@ public class Main {
         Team<FootballPlayer> hawthorn=new Team<>("hawthorn");
         Team<FootballPlayer> fremantale=new Team<>("frementale");
 
+
+        //----------melboune team and member------
+        Team<FootballPlayer> melbourne=new Team<>("melbourne");
+        FootballPlayer nidesh=new FootballPlayer("nidesh");
+
+        melbourne.addPlayer(nidesh);
+
+
+
+
         hawthorn.matchResult(adelaideCrows,1,0);
+        melbourne.matchResult(hawthorn,3,1);
+
+
+
+        System.out.println("Rankings ");
+        System.out.println(adelaideCrows.getName()+" :" +adelaideCrows.ranking());
+        System.out.println(melbourne.getName()+" :" +melbourne.ranking());
+        System.out.println(hawthorn.getName()+" "+ hawthorn.ranking());
+
+        System.out.println(adelaideCrows.compareTo(melbourne));
+        System.out.println(melbourne.compareTo(hawthorn));
 
     }
 
