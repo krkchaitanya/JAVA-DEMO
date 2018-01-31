@@ -1,25 +1,35 @@
 package org.chaitanya.generics;
 
-import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args){
-        ArrayList<Integer> items=new ArrayList<>();
-        items.add(1);
-        items.add(2);
-        items.add(3);
-        items.add(4);
-//        items.add("tim");
-        items.add(5);
 
-        printDoubledItems(items);
-    }
+        FootballPlayer joe=new FootballPlayer("joe");
+        BaseballPlayer pat=new BaseballPlayer("pat");
+        SoccerPlayer backham=new SoccerPlayer("backhem");
 
-    public static void printDoubledItems(ArrayList<Integer> n){
-        for (int i: n){
-            System.out.println(i*2);
-        }
+        System.out.println("===================================");
+        Team<FootballPlayer> adelaideCrows=new Team<>("adelaideCrows");
+        adelaideCrows.addPlayer(joe);
+//        adelaideCrows.addPlayer(pat);
+//        adelaideCrows.addPlayer(backham);
+
+//        System.out.println(adelaideCrows.numPlayers());
+
+
+        Team<BaseballPlayer> baseballTeam=new Team<>("chicagoHubs");
+        baseballTeam.addPlayer(pat);
+
+
+        Team<SoccerPlayer> backhem=new Team<>("randomTeam");
+        backhem.addPlayer(backham);
+
+        Team<FootballPlayer> hawthorn=new Team<>("hawthorn");
+        Team<FootballPlayer> fremantale=new Team<>("frementale");
+
+        hawthorn.matchResult(adelaideCrows,1,0);
+
     }
 
 }
