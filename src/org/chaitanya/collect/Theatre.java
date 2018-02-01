@@ -41,7 +41,6 @@ public class Theatre {
             System.out.println("there is not seat "+ seatNumber);
             return false;
         }
-
         return requestedSeat.reserve();
     }
 
