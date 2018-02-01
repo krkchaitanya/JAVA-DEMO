@@ -43,7 +43,6 @@ public class Theatre {
         }
 
         return requestedSeat.reserve();
-
     }
 
 
