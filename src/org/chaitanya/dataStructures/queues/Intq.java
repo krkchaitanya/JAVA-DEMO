@@ -12,7 +12,7 @@ public class Intq {
     public Intq(){
         size=100;
         front=0;
-        rear=0;
+         rear=0;
         total=0;
         queue=new int[size];
     }
@@ -29,7 +29,7 @@ public class Intq {
         if(!isFull()){
             total++;
             queue[rear]=item;
-            rear++;
+            rear=(rear+1) % size;
             return true;
 
         }else{
@@ -42,7 +42,7 @@ public class Intq {
     public int dequeue(){
         int item=queue[front];
         total--;
-        front++;
+        front=(front+1) % size;
         return item;
     }
 
