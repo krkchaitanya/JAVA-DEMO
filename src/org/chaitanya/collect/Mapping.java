@@ -13,6 +13,7 @@ public class Mapping {
         lang.put("javascript","a scriptinglanaguage mainly used in creation of classes");
         lang.put("Alhol","algorithmic language");
         lang.put("HtmlCss","content and styling a web page");
+        lang.put("Lisp","some kind of styling content used in web app developerment");
 
 
         if(lang.containsKey("java")){
@@ -28,6 +29,19 @@ public class Mapping {
         for (String key:lang.keySet()){
             System.out.println(key+" : "+ lang.get(key));
         }
+
+        System.out.println("-----------------------------");
+
+        lang.remove("Lisp");
+
+        lang.replace("javascript","its an scripting lan with ang and react frameworls and libraries");
+
+
+        for (String key:lang.keySet()){
+            System.out.println(key+" : "+ lang.get(key));
+        }
+
+
 
     }
 
