@@ -73,6 +73,19 @@ public class Main {
         }
 
 
+        System.out.println("===============");
+
+        HeavenlyBody pluto=new HeavenlyBody("Pluto", 431);
+        planets.add(pluto);
+
+        for(HeavenlyBody planet:planets){
+            System.out.println(planet.getName() + " "+ planet.getOrbitalPeriod());
+        }
+
+
+        Object o=new Object();
+        o.equals(o);
+
 
     }
 }
