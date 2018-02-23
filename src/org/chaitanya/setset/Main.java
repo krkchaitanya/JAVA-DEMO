@@ -26,9 +26,9 @@ public class Main {
         planets.add(temp);
 
 
-        temp=new HeavenlyBody("Jupiter",4332);
-        solarSystem.put(temp.getName(),temp);
-        planets.add(temp);
+//        temp=new HeavenlyBody("Jupiter",4332);
+//        solarSystem.put(temp.getName(),temp);
+//        planets.add(temp);
 
         HeavenlyBody tempMoon=new HeavenlyBody("IO",.35);
         solarSystem.put(tempMoon.getName(),tempMoon);
@@ -63,9 +63,14 @@ public class Main {
         System.out.println("planets--");
         for (HeavenlyBody planet:planets){
             System.out.println("\t"+planet.getName());
+//            System.out.println("-------------");
         }
 
-        HeavenlyBody body=solarSystem.get("Jupiter");
+        HeavenlyBody body=solarSystem.get("Earth");
+
+
+
+
         System.out.println("Moons of "+body.getName());
 
         for(HeavenlyBody jupiterMoon:body.getSatellites()){
@@ -75,16 +80,16 @@ public class Main {
 
         System.out.println("===============");
 
-        HeavenlyBody pluto=new HeavenlyBody("Pluto", 431);
-        planets.add(pluto);
-
-        for(HeavenlyBody planet:planets){
-            System.out.println(planet.getName() + " "+ planet.getOrbitalPeriod());
-        }
-
-
-        Object o=new Object();
-        o.equals(o);
+//        HeavenlyBody pluto=new HeavenlyBody("Pluto", 431);
+//        planets.add(pluto);
+//
+//        for(HeavenlyBody planet:planets){
+//            System.out.println(planet.getName() + " "+ planet.getOrbitalPeriod());
+//        }
+//
+//
+//        Object o=new Object();
+//        o.equals(o);
 
 
     }
