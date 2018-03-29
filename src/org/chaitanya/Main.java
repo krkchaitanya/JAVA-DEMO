@@ -4,17 +4,12 @@ package org.chaitanya;
 import org.chaitanya.AutoBoxingAndUnboxing.IntClass;
 import org.chaitanya.LinkedList.Customer;
 import org.chaitanya.ListArray.GroceryList;
-import org.chaitanya.classesContsructors.Account;
-import org.chaitanya.classesContsructors.Car;
+import org.chaitanya.Account.Account;
+import org.chaitanya.Account.Car;
 import org.chaitanya.composition.*;
 import org.chaitanya.encapsulation.EnhancedPlayer;
-import org.chaitanya.encapsulation.Player;
 import org.chaitanya.inherit.Animal;
 import org.chaitanya.inherit.Dog;
-import org.chaitanya.interfaces.Deskphone;
-import org.chaitanya.interfaces.ITelephone;
-import org.chaitanya.polymorph.Movie;
-
 
 
 import java.util.Scanner;
@@ -34,8 +29,8 @@ public class Main {
 
 
 //        Car class
-        org.chaitanya.classesContsructors.Car porsche=new org.chaitanya.classesContsructors.Car();
-        org.chaitanya.classesContsructors.Car holden=new Car();
+        org.chaitanya.Account.Car porsche=new org.chaitanya.Account.Car();
+        org.chaitanya.Account.Car holden=new Car();
         porsche.setModel("someModel");
 //        System.out.println("model gonna be--"+porsche.getModel());
 
