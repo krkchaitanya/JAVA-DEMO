@@ -13,7 +13,7 @@ public class Player {
             System.out.println("player knocked out");
         }
     }
-
+    
     public int healthRemaining(){
         return this.health;
     }
